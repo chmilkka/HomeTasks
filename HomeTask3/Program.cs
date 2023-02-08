@@ -16,7 +16,7 @@ namespace HomeTask3
 
             Console.WriteLine("Please, enter your login:");
             string loginInput = Console.ReadLine();
-
+// теж можна було в константу
             if (loginInput == "USER")
             {
                 Console.WriteLine("Please, enter your password:");
