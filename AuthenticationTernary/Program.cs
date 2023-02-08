@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace HomeTask3
+namespace AuthenticationTernary
 {
     class Program
     {
@@ -15,32 +15,20 @@ namespace HomeTask3
             {
                 Console.WriteLine("Please, enter your password:");
                 string passwordInput = Console.ReadLine();
-                if (passwordInput == secretPassword)
-                {
-                    Console.WriteLine("Hello User!");
-                }
-                else
-                {
-                    Console.WriteLine("Password is not correct");
-                }
+                string message = passwordInput == secretPassword ? "Hello User!" : "Password is not correct";
+                Console.WriteLine(message);
             }
             else if (loginInput == "ADMIN")
             {
                 Console.WriteLine("Please, enter your password:");
                 string passwordInput = Console.ReadLine();
-                if (passwordInput == secretPassword)
-                {
-                    Console.WriteLine("Hello Administrator!");
-                }
-                else
-                {
-                    Console.WriteLine("Password is not correct");
-                }
+                string message = passwordInput == secretPassword ? "Hello Administrator!" : "Password is not correct";
+                Console.WriteLine(message);
             }
             else if (loginInput == "")
             {
                 Console.WriteLine("Hello Anonimous!");
             }
-        }         
+        }
     }
 }
