@@ -6,12 +6,14 @@ namespace HomeTask3
     {
         static void Main(string[] args)
         {
+            // потрібно було зробити 3 окремих консольних додатка
             AuthenticationIfElse();
             AuthenticationSwitch();
             AuthenticationSwitch();
         }
         public static void AuthenticationIfElse()
         {
+            // тут молодець виніс в константу
             const string secretPassword = "12345";
 
             Console.WriteLine("Please, enter your login:");
@@ -27,6 +29,7 @@ namespace HomeTask3
                 }
                 else
                 {
+                    // супер, гарна логіка
                     Console.WriteLine("Password is not correct");
                 }
             }
@@ -59,6 +62,7 @@ namespace HomeTask3
             {
                 Console.WriteLine("Please, enter your password:");
                 string passwordInput = Console.ReadLine();
+                // супер
                 string message = passwordInput == secretPassword ? "Hello User!" : "Password is not correct";
                 Console.WriteLine(message);
             }
@@ -83,6 +87,7 @@ namespace HomeTask3
             Console.WriteLine("Please, enter your login:");
             string loginInput = Console.ReadLine();
 
+            // супер
             switch(loginInput)
             {
                 case "USER":
