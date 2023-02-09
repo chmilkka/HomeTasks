@@ -14,9 +14,8 @@ namespace HomeTask2
             string message = "Hello World";
             bool assessment = false; // Я вважаю що сусід сказав неправдиву інформацію щодо тривалості життя людини
             float humanTemperature = 36.6f; // float займає менше пам'яті ніж інші типи даних з плавучою крапкою
-            long planetPopulation = 8014863147; // Приблизне населення нашої планети зараз
-            sbyte temperatureInUkraine = -3; // На мою думку доречно використовувати тип даних
-                                             // який працює з цілими числами у невеликому діапазоні
+            ulong planetPopulation = 8014863147; // Приблизне населення нашої планети зараз
+            float temperatureInUkraine = -3.5f; 
 
             Console.WriteLine($"Age: {humanAge}");
             Console.WriteLine($"Bank account: {bankAccount}");
