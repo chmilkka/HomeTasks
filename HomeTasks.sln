@@ -9,9 +9,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HomeTask2", "HomeTask2\Home
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AuthenticationIfElse", "HomeTask3\AuthenticationIfElse.csproj", "{90314BC2-073F-40AF-A56F-F7FEEF88ACFE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AuthenticationTernary", "AuthenticationTernary\AuthenticationTernary.csproj", "{8899D964-0761-4DC7-AF43-CB79686EA652}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AuthenticationTernary", "AuthenticationTernary\AuthenticationTernary.csproj", "{8899D964-0761-4DC7-AF43-CB79686EA652}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AuthenticationSwitch", "AuthenticationSwitch\AuthenticationSwitch.csproj", "{A4720282-B438-4658-8882-F6717664E025}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AuthenticationSwitch", "AuthenticationSwitch\AuthenticationSwitch.csproj", "{A4720282-B438-4658-8882-F6717664E025}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HomeTask4", "HomeTask4\HomeTask4.csproj", "{41E241AE-40CF-4560-BFEE-0835342FF121}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{A4720282-B438-4658-8882-F6717664E025}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A4720282-B438-4658-8882-F6717664E025}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A4720282-B438-4658-8882-F6717664E025}.Release|Any CPU.Build.0 = Release|Any CPU
+		{41E241AE-40CF-4560-BFEE-0835342FF121}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{41E241AE-40CF-4560-BFEE-0835342FF121}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{41E241AE-40CF-4560-BFEE-0835342FF121}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{41E241AE-40CF-4560-BFEE-0835342FF121}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
