@@ -19,25 +19,26 @@ namespace HomeTask6
                 Console.Clear();
 
                 Console.WriteLine("Оберiть дiю:");
-                Console.WriteLine("1.Додавання");
-                Console.WriteLine("2.Вiднiмання");
-                Console.WriteLine("3.Дiлення");
-                Console.WriteLine("4.Множення");
+                Console.WriteLine("+");
+                Console.WriteLine("-");
+                Console.WriteLine("/");
+                Console.WriteLine("*");
+                Console.WriteLine("^");
 
-                int input = int.Parse(Console.ReadLine());
+                string input = Console.ReadLine();
                 Console.Clear();
 
                 switch (input)
                 {
-                    case 1:
+                    case "+":
                         result = Sum(a, b);
                         Console.WriteLine($"{a} + {b} = {result}");
                         break;
-                    case 2:
+                    case "-":
                         result = Difference(a, b);
                         Console.WriteLine($"{a} - {b} = {result}");
                         break;
-                    case 3:
+                    case "/":
                         if (b == 0)
                         {
                             Console.WriteLine("Дiлення на нуль неможливе!");
@@ -49,9 +50,13 @@ namespace HomeTask6
                             Console.WriteLine($"{a} / {b} = {result}");
                             break;
                         }
-                    case 4:
+                    case "*":
                         result = Multiplication(a, b);
                         Console.WriteLine($"{a} * {b} = {result}");
+                        break;
+                    case "^":
+                        result = Square(a, b);
+                        Console.WriteLine($"{a} ^ {b} = {result}");
                         break;
                     default:
                         Console.WriteLine("Обрана неiснуюча дiя!");
@@ -90,6 +95,15 @@ namespace HomeTask6
         static double Multiplication(double arg1, double arg2)
         {
             return arg1 * arg2;
+        }
+        static double Square(double arg1, double arg2)
+        {
+            double result = 1;
+            for (int i = 0; i < arg2; i++)
+            {
+                result *= arg1;
+            }
+            return result;
         }
     }
 }
