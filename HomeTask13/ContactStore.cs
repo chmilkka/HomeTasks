@@ -16,6 +16,14 @@ namespace HomeTask13
 
         public override void Create(IContact contact)
         {
+            foreach ( var c in _contacts)
+            {
+                if (c.Name == contact.Name)
+                {
+                    throw new DeniedOperationException($"Contact with {nameof(contact.Name)} {contact.Name} is already exists");
+                }
+            }
+            contact.Id = _contacts.Count + 1;
            _contacts.Add(contact);
         }
 
@@ -67,7 +75,7 @@ namespace HomeTask13
                     return true;
                 }
             }
-            return false;
+            throw new DeniedOperationException($"Contact with contact.Id {id} is not exists");
         }
 
         public override void Update(IContact contact)
