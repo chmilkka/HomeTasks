@@ -7,12 +7,14 @@ using System.Xml.Linq;
 
 namespace HomeTask13
 {
-    internal class ContactStore : BaseContactStore
+    internal class ContactStore : BaseContactStore, INotifiable
     {
         
         public ContactStore(IContactProvider contactProvider) : base(contactProvider)
         {
         }
+
+        public event SaveDelegate SaveEvent;
 
         public override void Create(IContact contact)
         {
@@ -23,8 +25,19 @@ namespace HomeTask13
                     throw new DeniedOperationException($"Contact with {nameof(contact.Name)} {contact.Name} is already exists");
                 }
             }
-            contact.Id = _contacts.Count + 1;
+
+            int lastIndex = _contacts.Count - 1;
+            if(_contacts.Count == 0)
+            {
+                contact.Id = 1;
+            }
+            else
+            {
+                contact.Id = _contacts[lastIndex].Id + 1;
+            }
+
            _contacts.Add(contact);
+            SaveEvent.Invoke(_contacts);
         }
 
         public override IContact GetById(int id)
@@ -72,6 +85,7 @@ namespace HomeTask13
                 if( contact.Id == id)
                 {
                     _contacts.Remove(contact);
+                    SaveEvent.Invoke(_contacts);
                     return true;
                 }
             }
@@ -85,6 +99,7 @@ namespace HomeTask13
                 if (_contacts[i].Id == contact.Id)
                 {
                     _contacts[i] = contact;
+                    SaveEvent.Invoke(_contacts);
                     break;
                 }
             }

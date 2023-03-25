@@ -6,8 +6,9 @@
         {
             Console.OutputEncoding = System.Text.Encoding.UTF8;
 
-            var emptyList = new InMemoryContactProvider();
-            var contactStore = new ContactStore(emptyList);
+            var contactList = new PersistentContactProvider();           
+            var contactStore = new ContactStore(contactList);
+            contactStore.SaveEvent += contactList.Save;
             bool flag = true;
 
 
@@ -27,7 +28,7 @@
                     case "1":
                         foreach (var contact in contactStore)
                         {
-                            Console.WriteLine($"Id: {contact.Id}, Ім'я: {contact.Name}, Номер телефону: {contact.PhoneNumber}");
+                            Console.WriteLine($"{contact.Id}, {contact.Name}, {contact.PhoneNumber}");
                         }
                         break;
 
